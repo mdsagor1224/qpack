@@ -1,0 +1,69 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  2.3 Buttons
+/*----------------------------------------*/
+
+.vl-btn{
+    background: var(--vkl-text-text-1);
+    padding: 16px 45px;
+    font-size: 18px;
+    border-radius: 8px;
+    display: inline-block;
+    color: var(--vkl-text-text-white);
+    position: relative;
+    overflow: hidden; 
+    &:hover{
+        & .vl-btn-y-1{
+            transform: translateY(-100%);
+        }
+        & .vl-btn-y-2{
+            transform: translateY(0);
+        }
+        color: var(--vkl-text-text-white);
+    }
+    &-sec{ 
+        background: var(--vkl-text-text-1);
+        padding: 16px 24px;
+        font-size: 18px;
+        border-radius: 8px;
+        display: inline-block;
+        position: relative;
+        &:hover{
+            & .vl-btn-y-1{
+                transform: translateY(-100%);
+            }
+            & .vl-btn-y-2{
+                transform: translateY(0);
+            }
+        }
+    }
+        &:hover{
+            background: var(--vl-theme-color);
+            color: var(--vkl-text-text-white);
+            border-color: var(--vl-theme-color);
+            opacity: 1;
+        }
+
+    &-wrap{
+        position: relative;
+        overflow: hidden;
+        display: block;
+        color: var(--vkl-text-text-white);
+        font-weight: var(--vkl-weight-ex-bold);
+        text-transform: uppercase;
+        & span{
+            transition: .3s;
+            display: block;
+        }
+    }
+   
+    &-y-2{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        transform: translateY(100%);
+    }
+
+}

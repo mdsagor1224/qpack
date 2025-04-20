@@ -1,0 +1,182 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  6.1 Footer Style 1
+/*----------------------------------------*/
+
+
+.vl-footer{
+    &-content{
+        p {
+            color:var(--vkl-text-text-2);
+            opacity: .8;
+            font-size: 18px;
+            line-height: 26px;
+            margin: 0;
+        }
+    }
+    &-social{
+        ul{
+            li{
+                display: inline-block;
+            }
+            a{
+                height: 32px;
+                width: 32px;
+                background: #273366;
+                color: #fff;
+                display: block;
+                line-height: 34px;
+                text-align: center;
+                border-radius: 50px;
+                margin-right: 7px;
+                transition: .3s;
+                overflow: hidden;
+                font-size: 16px;
+                position: relative;
+                z-index: 1;
+                &:after{
+                    position: absolute;
+                    content: "";
+                    left: 0;
+                    top: 0;
+                    height: 100%;
+                    width: 0;
+                    background: var(--vl-gradient-1);
+                    z-index: -1;
+                    transition: .3s;
+                }
+                &:hover:after{
+                    width: 100%;
+                }
+            }
+            
+        }
+    }
+    &-widget{
+        &-title{
+            color: var(--vkl-text-text-black);
+            font-size: var(--vkl-font-size-font-s24);
+            line-height: var(--vkl-specing-height24);
+            font-weight: var(--vkl-weight-bold);
+        }
+        &-3{
+            &.ml-40 {
+                @media #{$md,$xs}{
+                    margin-left: 0px;
+                }
+            }
+        }
+
+        &-4{
+            margin-left: 120px;
+            @media #{$md,$xs}{
+                margin-left: 0;
+            }
+            p{
+                color: #fff;
+                opacity: .8;
+                font-size: 18px;
+                line-height: 26px;
+            }
+        }
+    }
+    &-menu{
+        & ul{
+            & li{
+                & a{
+                    color:var(--vkl-text-text-2);
+                    opacity: .8;
+                    transition: .3s;
+                    font-size: 18px;
+                    margin-bottom: 20px;
+                    display: block;
+                    &:hover{
+                        color: var(--vkl-bg-bg-2);
+                        opacity: 1;
+                        transition: .3s;
+                    }
+                }
+            }
+        }
+    }
+    &-newsletter{
+        & {
+            input[type=email] {
+            border-radius: 4px;
+            }
+        }
+        &-btn{
+            & .vl-btn-sec{
+                width: 100%;
+                text-align:center;
+            }
+        }
+    }
+    
+    &-copyright{
+        &-text{
+            color: var(--vl-white-8);
+            padding: 24px 0;
+            margin: 0;
+            border-top: 1px solid #585D79;
+        }
+    }
+}
+
+
+
+// copy right
+.vl-copy-righ1t{
+    padding: 22px 0;
+    padding-bottom: 0;
+    border-top: 1px solid #DCDDE6;
+    & .vl-footer-copy-right-widget{
+        & .para{
+            color: var(--vkl-text-text-3);
+            font-size: var(--vkl-font-size-font-s20);
+            line-height: var(--vkl-specing-height20);
+            font-weight: var(--vkl-weight-medium);
+        }
+    }
+    & .vl-copy-right-menu{
+        text-align: right;
+        & ul{
+            & li{
+                display: inline-block;
+                margin-left: 16px;
+                padding-left: 16px;
+                position: relative;
+                z-index: 1;
+                &::after{
+                    position: absolute;
+                    content: "";
+                    right:-16px;
+                    top: 0;
+                    width: 2px;
+                    height: 16px;
+                    background:#DADBE1;
+                }
+                &:last-child{
+                    &::after{
+                        display: none;
+                    }
+                }
+                & a{
+                    color: var(--vkl-text-text-3);
+                    font-size: var(--vkl-font-size-font-s20);
+                    line-height: var(--vkl-specing-height20);
+                    font-weight: var(--vkl-weight-medium);
+                    display: block;
+                    transition: .3s;
+                    
+                    
+                    &:hover{
+                        color: var(--vkl-text-text-1);
+                        transition: .3s;
+                    }
+                }
+            }
+        }
+    }
+}
