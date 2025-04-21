@@ -39,6 +39,7 @@
 		2.16 Search
 		2.17 Hotspot
 		2.18 Ragne Slider
+		2.19 IconBox
 	-----------------
     03. HEADER CSS
 	-----------------
@@ -273,10 +274,11 @@ textarea{
 	height: 56px;
 	width: 100%;
 	line-height: 56px;
-	font-size: 14px;
-	color: var(--vkl-common-black);
-	padding-left: 26px;
-	padding-right: 26px;
+	font-size: var(--vkl-font-size-font-s18);
+    font-weight: var(--vkl-weight-medium);
+	color: var(--vkl-text-text-2);
+	padding-left: 16px;
+	padding-right: 16px;
 	border: 1px solid #E0E2E3;
 
 	// @include vkl-placeholder{
@@ -287,6 +289,9 @@ textarea{
 		border: 1px solid #E0E2E3;
 		&::placeholder{
 			opacity: 0;
+			font-size: var(--vkl-font-size-font-s18);
+			font-weight: var(--vkl-weight-medium);
+			color: var(--vkl-text-text-2);
 		}
 	}
 
